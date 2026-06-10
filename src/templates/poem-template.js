@@ -5,7 +5,7 @@ import Seo from '../components/seo'
 import {micromark} from 'micromark'
 import parse from 'html-react-parser'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
+import ImageGalleryCaptions from "../components/image-gallery"
 
 function PoemPage ({ data }) {
     const pageInfo = data.markdownRemark
@@ -30,9 +30,15 @@ function PoemPage ({ data }) {
             {parse(micromark(pageInfo.frontmatter.poem))}
         </div>
         {pageInfo.frontmatter.inspiration && 
-          <div>
+          <div className="mt-10">
             <h2>The Inspiration</h2>
             {parse(micromark(pageInfo.frontmatter.inspiration))}
+          </div>}
+
+        {pageInfo.frontmatter.gallery && 
+          <div className="mt-10">
+            <h2>The Gallery</h2>
+            <ImageGalleryCaptions images={pageInfo.frontmatter.gallery} />
           </div>}
       </Layout>
     )
