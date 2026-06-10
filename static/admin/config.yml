@@ -6,9 +6,9 @@ media_folder: static/decap-img
 public_folder: /decap-img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: 'poems'
+    label: 'Poems'
+    folder: 'content/poems'
     create: true
     slug: 'index'
     media_folder: ''
@@ -18,6 +18,19 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}', format: 'D/MMM/YYYY'}
+      - { label: 'Favourite?', name: 'favourite', hint: 'Will add to homepage if toggled.', widget: 'boolean', default: false}
+      - { label: 'Abstract', name: 'abstract', required: false, hint: 'A short intro to the page.', widget: 'string', pattern: '.{0,160}' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Featured Image", name: "thumbnail", hint: 'Image at the top of the page.', widget: "image", choose_url: true, default: "/uploads/chocolate-dogecoin.jpg", allow_multiple: false }
+      - { label: 'Poem', name: 'poem', widget: 'richtext', buttons: ['bold', 'italic', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], editor_components: [], modes: ['rich_text'] }
+      - { label: 'Inspiration', name: 'inspiration', widget: 'richtext', buttons: ['bold', 'italic', 'heading-three', 'heading-four', 'quote', 'bulleted-list', 'numbered-list'], editor_components: ['image'], modes: ['rich_text'] }
+      - label: "Inspiration Gallery"
+        name: "gallery"
+        hint: 'Any photos to attach for this.'
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Image", name: "image", widget: "image", allow_multiple: false }
+          - { label: "Caption Title", name: "caption", hint: 'A short title for the image.', widget: "string", required: false}
+          - { label: "Caption Description", name: "captionDesc", hint: 'An explanation for the image.', widget: "string", required: false}
