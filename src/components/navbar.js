@@ -80,7 +80,7 @@ export default class Navbar extends React.Component {
                 </div>
                 <div className={'flex-shrink-0 mb-1 lg:py-2 mr-0 md:mr-3 lg:w-auto flex-wrap items-center ' + this.state.menuOpenClassName}>
                     <NavbarLink to={'/'} title={'Home'} />
-                    <NavbarLink to={'/'} title={'Poems'} />
+                    <NavbarLink to={'/poems'} title={'Poems'} />
                     <NavbarLink to={'/'} title={'Photos'} />
                     <NavbarLink to={'/'} title={'About Me'} />
                 </div>
