@@ -5,7 +5,7 @@ import Seo from '../../components/seo'
 import { graphql } from 'gatsby'
 import {micromark} from 'micromark'
 import parse from 'html-react-parser'
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { ExternalSearchButton, InternalButton } from "../../components/button"
 const {getSlug} = require('../../components/helperFunctions')
 
@@ -13,6 +13,7 @@ const {getSlug} = require('../../components/helperFunctions')
 // Define components
 const RoutePage = ({data}) =>{
     const {nodes} = data.allMarkdownRemark;
+
     return (
       <Layout subdomain="poems">
       <Padding>
@@ -25,10 +26,8 @@ const RoutePage = ({data}) =>{
 
                 <div className="w-full flex flex-row gap-4 my-8 py-8 border-t-2 accent-border">
                     <div className="flex flex-col w-1/5">
-                        <StaticImage 
-                            className="w-full flex self-start "
-                            objectFit='contain'
-                            src="../../../static/images/Luna.jpg"
+                        <GatsbyImage
+                          image={getImage(poemInfo.frontmatter.heroImage?.childImageSharp?.gatsbyImageData)}
                         />
                         <p className='border-l-2 accent-border px-2 mt-2'>{poemInfo.frontmatter.date}</p>
                     </div>
@@ -75,6 +74,11 @@ export const query = graphql`
           title
           date
           poem
+          heroImage {
+            childImageSharp {
+              gatsbyImageData(aspectRatio: 0.5625)
+            }
+          }
         }
         fileAbsolutePath
       }
