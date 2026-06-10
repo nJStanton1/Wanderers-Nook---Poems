@@ -5,10 +5,10 @@ const yaml = require('js-yaml');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://wanderersnook.co.uk/',
+    siteUrl: 'https://poems.wanderersnook.co.uk/',
     title: 'The Wanderers Nook',
-    author: 'Nathaniel J Stanton',
-    description: 'Discover adventure, trees and the outdoors in and around Manchester.',
+    author: 'Ellie McDonald',
+    description: 'Poems for those who love the outdoors.',
     image: './static/logos/Logo.png', 
     siteSearch: 'nositelinkssearchbox',
   },
@@ -44,6 +44,17 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages`,
       }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `poems`,
+        path: `${__dirname}/content/poems`,
+      }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {},
     },
   ],
 }

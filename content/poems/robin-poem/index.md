@@ -59,4 +59,3 @@ gallery:
     caption: An iris
   - image: photo-from-nathaniel.jpg
 ---
-Something in body, for now.
