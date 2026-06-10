@@ -10,6 +10,7 @@ export const Layout = ({ children, subdomain }) => {
     hub: 'hub',
     walks: 'walks',
     trees: 'trees',
+    poems: 'poems',
     // Add more subdomains here in the future
   };
 

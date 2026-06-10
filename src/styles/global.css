@@ -252,6 +252,20 @@
     body.trees .accent-border-dark {
         @apply border-accent-trees-dark;
     }
+
+    /* POEMS */
+    body.poems .accent-background {
+        @apply bg-accent-poems text-white;
+    }
+    body.poems .accent-dark-background {
+        @apply bg-accent-poems-dark;
+    }
+    body.poems .accent-border {
+        @apply border-accent-poems;
+    }
+    body.poems .accent-border-dark {
+        @apply border-accent-poems-dark;
+    }
 }
 
 @layer components {

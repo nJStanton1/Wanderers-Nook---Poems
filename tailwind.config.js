@@ -51,6 +51,8 @@ module.exports = {
         'accent-walks-dark':'#92523A',
         'accent-trees':'#C9870B',
         'accent-trees-dark':'#AE7509',
+        'accent-poems':'#EF8787',
+        'accent-poems-dark':'#FF9FB2',
         'accent-info':'#75BBFF',
       },
     },
