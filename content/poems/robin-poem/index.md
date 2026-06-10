@@ -3,7 +3,7 @@ title: Robin Poem
 date: 10/Jun/2026
 favourite: true
 abstract: A poem about a robin
-thumbnail: photo-from-nathaniel-1-.jpg
+heroImage: photo-from-nathaniel-1-.jpg
 poem: |-
   If souls scatter on the wind\
   And become a new thing\
