@@ -1,5 +1,6 @@
 ---
 title: Robin Poem
+template: poem
 date: 10/Jun/2026
 favourite: true
 abstract: A poem about a robin
