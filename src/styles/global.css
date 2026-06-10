@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Chillax-Variable';
+        src: url('../../static/fonts/Chillax/Chillax-Variable.ttf') format('woff2'),
+             url('../../static/fonts/Chillax/Chillax-Variable.woff') format('woff'),
+             url('../../static/fonts/Chillax/Chillax-Variable.ttf') format('truetype');
+        font-weight: 200 700;
+        font-display: swap;
+        font-style: normal;
+      }
+    
+    /* DraftingMono Thin */
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-Thin.ttf') format('truetype');
+        font-weight: 100;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-ThinItalic.ttf') format('truetype');
+        font-weight: 100;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    /* DraftingMono ExtraLight */
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-ExtraLight.ttf') format('truetype');
+        font-weight: 200;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-ExtraLightItalic.ttf') format('truetype');
+        font-weight: 200;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    /* DraftingMono Light */
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-Light.ttf') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-LightItalic.ttf') format('truetype');
+        font-weight: 300;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    /* DraftingMono Regular */
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-Italic.ttf') format('truetype');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    /* DraftingMono Medium */
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-Medium.ttf') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-MediumItalic.ttf') format('truetype');
+        font-weight: 500;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    /* DraftingMono SemiBold */
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-SemiBold.ttf') format('truetype');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-SemiBoldItalic.ttf') format('truetype');
+        font-weight: 600;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    /* DraftingMono Bold */
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-Bold.ttf') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'DraftingMono';
+        src: url('../../static/fonts/DraftingMono/DraftingMono-BoldItalic.ttf') format('truetype');
+        font-weight: 700;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    html {
+        @apply text-white font-mono;
+    }
+
+    h1 {
+        @apply 
+            font-sans
+            font-normal
+            text-heading-hero
+            md:text-heading-hero-md
+            lg:text-heading-hero-lg
+            text-center
+            md:text-start
+            py-2;
+    }
+    h2 {
+        @apply 
+            font-sans
+            font-normal
+            text-heading-lg
+            md:text-heading-lg-md
+            md:text-heading-lg-lg
+            text-center
+            md:text-start
+            py-2;
+    }
+    h3 {
+        @apply 
+            font-sans
+            font-thin
+            text-heading-md
+            md:text-heading-md-md
+            lg:text-heading-md-lg
+            font-medium
+            text-center
+            md:text-start
+            py-2;
+    }
+    p {
+        @apply 
+            text-body
+            md:text-body-lg
+            font-light
+            text-center
+            md:text-start
+            pb-2;
+    }
+    ul {
+        @apply 
+            pl-5;
+    }
+    li {
+        @apply 
+            py-1 
+            text-body;
+    }
+    
+    a.blog-content {
+        @apply underline;
+    }
+
+    /* ACCENT COLOURS */
+    /* Generic accent classes for background/text */
+    .accent-background {
+        /* background/text set via body subdomain */
+    }
+    .accent-dark-background {
+        /* hover/dark background set via body subdomain */
+    }
+
+    /* Generic accent classes for borders */
+    .accent-border {
+        /* border color set via body subdomain */
+    }
+    .accent-border-dark {
+        /* hover/dark border color set via body subdomain */
+    }
+
+    /* Subdomain overrides */
+    /* HUB */
+    body.hub .accent-background {
+        @apply bg-accent-hub text-white;
+    }
+    body.hub .accent-dark-background {
+        @apply bg-accent-hub-dark;
+    }
+    body.hub .accent-border {
+        @apply border-accent-hub;
+    }
+    body.hub .accent-border-dark {
+        @apply border-accent-hub-dark;
+    }
+
+    /* WALKS */
+    body.walks .accent-background {
+        @apply bg-accent-walks text-white;
+    }
+    body.walks .accent-dark-background {
+        @apply bg-accent-walks-dark;
+    }
+    body.walks .accent-border {
+        @apply border-accent-walks;
+    }
+    body.walks .accent-border-dark {
+        @apply border-accent-walks-dark;
+    }
+
+    /* TREES */
+    body.trees .accent-background {
+        @apply bg-accent-trees text-white;
+    }
+    body.trees .accent-dark-background {
+        @apply bg-accent-trees-dark;
+    }
+    body.trees .accent-border {
+        @apply border-accent-trees;
+    }
+    body.trees .accent-border-dark {
+        @apply border-accent-trees-dark;
+    }
+}
+
+@layer components {
+    .section-content {
+
+    }
+}
+
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hide-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
