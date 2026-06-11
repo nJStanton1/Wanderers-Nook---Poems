@@ -12,7 +12,7 @@ function PoemPage ({ data }) {
     return (
       <Layout subdomain="poems">
         <Padding>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row gap-3 md:gap-10">
             {pageInfo.frontmatter.heroImage &&
             <div className="flex w-1/5">
               <GatsbyImage

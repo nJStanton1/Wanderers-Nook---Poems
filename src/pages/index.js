@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Layout, Padding } from "../components/layout"
 import { StaticImage } from "gatsby-plugin-image"
-import { ExternalSearchButton, InternalButton } from "../components/button"
 import Seo from "../components/seo"
 import { AnchorMenu, AnchorButton } from "../components/anchor-menu"
 import FavouritePoemsGallery from "../components/favourite-poems-gallery"

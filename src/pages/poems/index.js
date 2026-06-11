@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 import {micromark} from 'micromark'
 import parse from 'html-react-parser'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { ExternalSearchButton, InternalButton } from "../../components/button"
+import { InternalButton } from "../../components/button"
 const {getSlug} = require('../../components/helperFunctions')
 
 

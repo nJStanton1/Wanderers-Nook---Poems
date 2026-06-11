@@ -159,13 +159,11 @@
     h3 {
         @apply 
             font-sans
-            font-thin
             text-heading-md
             md:text-heading-md-md
             lg:text-heading-md-lg
             font-medium
-            text-center
-            md:text-start
+            text-start
             py-2;
     }
     p {

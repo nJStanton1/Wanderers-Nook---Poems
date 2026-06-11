@@ -1,7 +1,5 @@
 import * as React from 'react'
-import * as PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 import {micromark} from 'micromark'
 import parse from 'html-react-parser'
