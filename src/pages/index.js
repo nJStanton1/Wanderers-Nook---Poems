@@ -42,8 +42,9 @@ const IndexPage = () => {
 export default IndexPage
 
 export const Head = () => <Seo 
-  pageTitle={"Hub"}
-  pageDescription={"Hub page for the Wanderer's Nook. Find your interest in outdoors."}
+  pageTitle={"El's Poems"}
+  pageDescription={"Read my poetry based on nature and feelings."}
+  pageURL={'/'}
   >
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </Seo>

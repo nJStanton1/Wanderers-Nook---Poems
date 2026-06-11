@@ -46,6 +46,14 @@ function PoemPage ({ data }) {
 
 export default PoemPage
 
+export const Head = ({ data, pageContext }) => <Seo 
+  pageTitle={data.markdownRemark.frontmatter.title}
+  pageDescription={data.markdownRemark.frontmatter.abstract}
+  pageURL={pageContext.slug}
+  >
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </Seo>
+
 export const query = graphql`
   query ($id: String!) {
     markdownRemark(id: {eq: $id}) {
