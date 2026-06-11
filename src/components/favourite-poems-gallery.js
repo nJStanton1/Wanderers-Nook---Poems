@@ -38,14 +38,15 @@ const FavouritePoemsGallery = () => {
         <div id="favourite-poems" className='w-full pt-4'>
             <div className="flex flex-col">
                 {favouritePoems.allMarkdownRemark.nodes.map( (favouritePoem, i) => (
-                    <div key={favouritePoem + "-" + i} className="w-full flex flex-row gap-4 my-8 py-8 border-t-2 accent-border">
+                    <div key={favouritePoem.frontmatter.title + "-" + i} className="w-full flex flex-row gap-4 my-8 py-8 border-t-2 accent-border">
                         <div className="flex w-1/5">
-                            <GatsbyImage
-                                image={getImage(favouritePoem.frontmatter.heroImage?.childImageSharp?.gatsbyImageData)}
-                                className='w-full flex self-start'
-                                objectFit='contain'
-                                
-                            />
+                            {favouritePoem.frontmatter.heroImage &&
+                              <GatsbyImage
+                                  image={getImage(favouritePoem.frontmatter.heroImage?.childImageSharp?.gatsbyImageData)}
+                                  className='w-full flex self-start'
+                                  objectFit='contain'
+                              />
+                            }
                         </div>
                         
                         <div className="flex flex-col w-4/5">

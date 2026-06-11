@@ -11,7 +11,7 @@ const {getSlug} = require('../../components/helperFunctions')
 
 
 // Define components
-const RoutePage = ({data}) =>{
+const PoemPage = ({data}) =>{
     const {nodes} = data.allMarkdownRemark;
 
     return (
@@ -24,11 +24,14 @@ const RoutePage = ({data}) =>{
           {
             nodes.map(poemInfo => (
 
-                <div className="w-full flex flex-row gap-4 my-8 py-8 border-t-2 accent-border">
-                    <div className="flex flex-col w-1/5">
-                        <GatsbyImage
-                          image={getImage(poemInfo.frontmatter.heroImage?.childImageSharp?.gatsbyImageData)}
-                        />
+                <div className="w-full flex flex-col md:flex-row gap-4 my-8 py-8 border-t-2 accent-border">
+                    <div className="flex flex-col gap-3 md:gap-0 md:w-1/5">
+                        {poemInfo.frontmatter.heroImage &&
+                          <GatsbyImage
+                            className='max-h-96 max-w-40 md:max-w-none md:max-h-none'
+                            image={getImage(poemInfo.frontmatter.heroImage?.childImageSharp?.gatsbyImageData)}
+                          />
+                        }
                         <p className='border-l-2 accent-border px-2 mt-2'>{poemInfo.frontmatter.date}</p>
                     </div>
                     
@@ -36,7 +39,7 @@ const RoutePage = ({data}) =>{
                     <h2>{poemInfo.frontmatter.title}</h2>
                     {parse(micromark(poemInfo.frontmatter.poem))}
                     <div className="flex flex-row-reverse">
-                        <InternalButton text="Learn what inspired this poem" linkTo={"/poems/" + getSlug(poemInfo.fileAbsolutePath)}/>
+                        <InternalButton text="What inspired this poem?" linkTo={"/poems/" + getSlug(poemInfo.fileAbsolutePath)}/>
                     </div>
                     </div>
                 </div>
@@ -49,7 +52,7 @@ const RoutePage = ({data}) =>{
 }
  
 // Export component
-export default RoutePage
+export default PoemPage
 
 export const Head = () => {
   
@@ -76,7 +79,11 @@ export const query = graphql`
           poem
           heroImage {
             childImageSharp {
-              gatsbyImageData(aspectRatio: 0.5625)
+              gatsbyImageData(
+                aspectRatio: 0.5625
+                layout: CONSTRAINED
+                transformOptions: {fit: INSIDE}
+              )
             }
           }
         }

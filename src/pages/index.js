@@ -15,7 +15,7 @@ const IndexPage = () => {
           src="../../static/images/Coenathus.jpg"
         />
         <div className="w-2/3 content-center">
-          <h1 className="text-left text-3xl md:text-6xl lg:text-6xl pr-4">El's Poems</h1>
+          <h1 className="">El's Poems</h1>
           <p className="w-full text-left mb-2 md:mb-0 pr-4">Welcome to El's Poems, where she often regrets writing about fucking robins.</p>
         </div>
       </div>

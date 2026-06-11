@@ -143,8 +143,7 @@
             text-heading-hero
             md:text-heading-hero-md
             lg:text-heading-hero-lg
-            text-center
-            md:text-start
+            text-start
             py-2;
     }
     h2 {
@@ -154,8 +153,7 @@
             text-heading-lg
             md:text-heading-lg-md
             md:text-heading-lg-lg
-            text-center
-            md:text-start
+            text-start
             py-2;
     }
     h3 {
@@ -175,8 +173,7 @@
             text-body
             md:text-body-lg
             font-light
-            text-center
-            md:text-start
+            text-start
             pb-2;
     }
     ul {

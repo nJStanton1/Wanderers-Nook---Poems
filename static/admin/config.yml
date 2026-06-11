@@ -22,9 +22,9 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime', default: '{{now}}', format: 'D/MMM/YYYY'}
       - { label: 'Favourite?', name: 'favourite', hint: 'Will add to homepage if toggled.', widget: 'boolean', default: false}
       - { label: 'Abstract', name: 'abstract', required: false, hint: 'A short intro to the page.', widget: 'string', pattern: ['^(.){10,160}$', "Must have between 10 and 160 characters"] }
-      - { label: 'Featured Image', name: 'heroImage', hint: 'Image at the top of the page.', widget: 'image', allow_multiple: false }
+      - { label: 'Featured Image', name: 'heroImage', required: false, hint: 'Image at the top of the page.', widget: 'image', allow_multiple: false }
       - { label: 'Poem', name: 'poem', widget: 'richtext', buttons: ['bold', 'italic', 'heading-three', 'quote', 'bulleted-list', 'numbered-list'], editor_components: [], modes: ['rich_text'] }
-      - { label: 'Inspiration', name: 'inspiration', widget: 'richtext', buttons: ['bold', 'italic', 'heading-three', 'heading-four', 'quote', 'bulleted-list', 'numbered-list'], editor_components: ['image'], modes: ['rich_text'] }
+      - { label: 'Inspiration', name: 'inspiration', required: false, widget: 'richtext', buttons: ['bold', 'italic', 'heading-three', 'heading-four', 'quote', 'bulleted-list', 'numbered-list'], editor_components: ['image'], modes: ['rich_text'] }
       - label: "Inspiration Gallery"
         name: "gallery"
         hint: 'Any photos to attach for this.'
