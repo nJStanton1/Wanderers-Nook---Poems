@@ -1,39 +1,43 @@
 ---
 template: poem
-title: Robin Poem
+title: Grandad Jim...
 date: 10/Jun/2026
 favourite: true
 abstract: Poem about a robin for Jim.
 heroImage: photo-from-nathaniel-1-.jpg
 poem: |-
-  If souls scatter on the wind\
-  And become a new thing\
-  I think you'll be a robin the shed.
+  If souls scatter on the wind \
+  and become a new thing \
+  I think you'll be a robin in the shed. 
 
-  On your death bed\
-  The sun was shining\
-  The grass so green, the sky so blue\
-  And in the shed you had built\
-  In the garden outside your bedroom window\
-  The robins flew\
-  In and out of that gap above the door\
-  Where the hinge had slipped\
-  It was a perfect fit\
+  On your death bed \
+  the sun was shining\
+  the grass so green, the sky so blue \
+  and in the shed you had built\
+  in the garden outside your bedroom window \
+  the robins flew.
+
+  In and out of that gap above the door \
+  where the hinge had slipped\
+  the robins found a perfect fit.\
   They came and went\
-  Collecting straw and food\
-  And stood watch on the fence\
-  As you drew your last breath.
+  with straw and food\
+  for months you had sat and viewed\
+  pointed them out to us as they fluttered by,\
+  and so, as you drew your last breathe\
+  the robins had come to say goodbye. 
 
   Gran listed everyone that loved you\
-  Held your hand, stroked your hair\
+  Mum held your hand, I stroked your hair\
+  Paul stood on guard at the foot of your bed\
   And peacefully you left.
 
   And so if souls scatter on the wind\
-  And become a new thing\
-  You'll be born again with a red breast\
-  Land on your own shed\
-  And sit with us on sunny days\
-  **Whilst we talk about all the memories you made.**
+  and become a new thing\
+  you'll be born again with a red breast\
+  land on your own shed\
+  and sit with us on sunny days\
+  whilst we talk about all of the memories you made.
 inspiration: >-
   **Lorem Ipsum** is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since 1966, when
